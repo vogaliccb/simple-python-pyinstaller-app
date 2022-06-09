@@ -12,11 +12,4 @@ pipeline {
             }
         }
     }
-    post {
-        success {
-            mail to: 'rainwish@alumni.sjtu.edu.cn',
-                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                 body: "Something is wrong with ${env.BUILD_URL}"
-        }
-    }
 }
