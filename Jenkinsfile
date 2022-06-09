@@ -7,6 +7,7 @@ pipeline {
                 sh 'pwd' 
             }
         }
+    }
     stages {
         stage('Build') { 
             agent {
